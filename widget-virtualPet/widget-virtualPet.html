@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <title>Virtual Pet</title>
+	<!--This example creates a virtual pet simulator.
+	Your pet has various needs that are continually decreasing.
+	Press the buttons to give your pet what it needs, or it will leave!
+	Your pet's expression will change depending on what it needs.
+	
+	The scripting is done in plain-ol' Javascript.
+	-->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<style>
+	.labelNeed
+	{
+	float:left;
+	}
+	
+	.meterNeed
+	{
+	float:left;
+	background-color:green;
+	width:200px;
+	height:10px;
+	margin-top:5px;
+	position:absolute;
+	left:100px;
+	}
+	
+	
+	</style>
+	
+</head>	
+
+<body>
+	<div id="wrapper">
+		<div id="yourPet">
+		</div>
+		
+	<!-- Labels and Meters -->
+		<div id="labelFood" class="labelNeed">
+		Food
+		</div>
+		<div id="meterFood" class="meterNeed">
+		</div>
+	<br/>
+	
+		<div id="labelWater" class="labelNeed">
+		Water
+		</div>
+		<div id="meterWater" class="meterNeed">
+		</div>
+	<br/>
+	
+		<div id="labelVitx" class="labelNeed">
+		Vitamin X
+		</div>
+		<div id="meterVitx" class="meterNeed">
+		</div>
+	<br/>
+	
+	<!-- Buttons -->
+		<button id="btnFood">
+		Food
+		</button>
+		<button id="btnWater">
+		Water
+		</button>
+		<button id="btnVitx">
+		Vitamin X
+		</button>
+		
+	<div id="testTimeout">Test timeout</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+//Declare variables
+var timeBaseFood = 200;
+var timeBaseWater = 200;
+var timeBaseVitx = 200;
+var timeNowFood = 200;
+var timeNowWater = 200;
+var timeNowVitx = 200;
+var timeNowFood2 = 0;
+var timeChangeFood = 1;
+var timeChangeWater = 2;
+var timeChangeVitx = 3;
+
+//Meter widtth changes versus time
+function timeoutFood()
+{
+	setTimeout(function(){
+				timeNowFood=timeNowFood-timeChangeFood;
+				document.getElementById("testTimeout").innerHTML=timeNowFood;
+				timeoutFood();
+			}, 1000;
+		);
+}
+
+timeoutFood();
+
+/*
+//Button presses
+document.getElementById("btnFood").onclick(function()
+		{
+		}
+	)
+
+document.getElementById("btnWater").onclick(function()
+		{
+		}
+	)
+
+document.getElementById("btnVitx").onclick(function()
+		{
+		}
+	)
+*/
+//Feedbacks: meter color and pet appearance
+
+</script>
+
+</html>
