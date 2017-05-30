@@ -1,0 +1,71 @@
+<!--
+VIRTUAL PET WEB CODING EXAMPLE  HTML PAGE
+
+XHMTL meta info from https://www.w3schools.com/Html/html_xhtml.asp
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Virtual Pet</title>
+      <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+<!--
+Virtual pet is an image (in this case, some rubbish I made with type)
+with eyes/face expressing state of pet (well, sick, dead)
+-->
+	<div id="petImage" class="alignCtr backMe cornered floatLeft">
+		
+		<div id="petTop">^^^^^^^^</div>
+		<div id="petEyes">o....o</div>
+		<div id="petMouth">=v====v=</div>
+		<div id="petBtm">vvvvvvvv</div>
+		
+	</div>
+	
+<!--
+Next section is the HUD, which will appear to the right of the pet image.
+The three meters (health, vitamin M, vitamin R) are labeled.
+There are 2 buttons for feeding your pet vitamin M and vitamin R.
+-->
+    <div id="hud">
+		
+		<div id="labels" class="backMe floatLeft">
+			<div id="labelH">Health</div>
+			<div id="labelVM">Vitamin M</div>
+			<div id="labelVR">Vitamin R</div>
+		</div>
+		
+		<div id="meters" class="backMe floatLeft">
+			<div id="mtrH" class="cornered heightFix"></div>
+			<div id="mtrVM" class="cornered heightFix"></div>
+			<div id="mtrVR" class="cornered heightFix"></div>
+		</div>
+		
+		<div id="buttons" class="backMe floatLeft">
+			<div id="btnVM" class="feedBtn alignCtr cornered heightFix">Feed</div>
+			<div id="btnVR" class="feedBtn alignCtr cornered heightFix">Feed</div>
+		</div>
+
+	</div>
+	
+	<!--
+	Feedback div display state is controlled by Javascript. It will appear under everything else.
+	-->
+	<div id="feedback" class="alignCtr backMe cornered">Oops, your pet didn't make it! Refresh to try again.</div>
+	
+  	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html> 
