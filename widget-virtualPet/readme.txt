@@ -1,16 +1,11 @@
 Web Widget - Virtual Pet Simulation
 
-Javascript is probably not the best tool for the job,
-nor is this the best way to apply it, but I felt like
-trying to see if I could do it anyhow just for kicks.
+Please use index.html to play with this widget.
 
-***
-This item is not finished. I will try to see if I can
-complete in the future.
-***
+This virtual pet needs the ultra-rare minerals known as Vitamin M and Vitamin R.
+Also, it is continually running out of these vital nutrients!
+Click the Feed buttons over and over again to perpetuate this strange creature's pointless existence.
 
-The aim is to create a scenario where you (yes, you!)
-have a virtual pet with a few needs that continually
-decrease. If your pet's needs run out, it will run away.
-Click the appropriate buttons to replenish your pet's
-needs and keep it happy.
+This is a project involving XHTML connecting to external sheets for CSS and Javascript.
+
+Do whatever you want with it. Your amusement is not guaranteed. Friendship optional.
